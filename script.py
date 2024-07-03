@@ -34,13 +34,13 @@ def get_weather_data(url, params, retries=5, backoff_factor=0.3):
 
 for date in dates_range:
     params = {
-        'key': api_key,
-        'q': location,
+        'key': API_KEY,
+        'q': LOCATION,
         'dt': date
     }
 
     # Get weather data
-    weather_data = get_weather_data(url, params)
+    weather_data = get_weather_data(API_URL, params)
 
     if weather_data:
         # Connect to SQLite database

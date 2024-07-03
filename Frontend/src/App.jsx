@@ -44,12 +44,12 @@ function App() {
             {weatherData && (
               <Temperature
                 stats={{
-                  temp: weatherData.data.daily[2], // Adjust based on actual data structure
+                  temp: weatherData.data.daily[2], 
                   condition: weatherData.data.daily[15],
-                  isDay: weatherData.data.daily[16] === "Yes", // Adjust logic based on actual data structure
-                  location: "Kargil", // Placeholder, adjust as needed
-                  sunrise: weatherData.data.daily[19], // Adjust index based on actual data structure
-                  sunset: weatherData.data.daily[20], // Adjust index based on actual data structure
+                  isDay: weatherData.data.daily[16] === "Yes", 
+                  location: "Kargil", 
+                  sunrise: weatherData.data.daily[19], 
+                  sunset: weatherData.data.daily[20], 
                   img: weatherData.data.daily[16],
                 }}
               />
@@ -67,7 +67,7 @@ function App() {
                 <Highlights
                   stats={{
                     title: "Wind Speed",
-                    value: weatherData.data.daily[8], // Adjust index based on actual data structure
+                    value: weatherData.data.daily[8], 
                     unit: "mph",
                   }}
                 />
@@ -96,7 +96,7 @@ function App() {
             )}
           </div>
         </div>
-        <div className=" mt-10 p-5">
+        <div className=" mt-10 p-5 ml-36">
           {weatherData && (
             <HourlyUpdates hourlyData={weatherData.data.hourly} />
           )}
