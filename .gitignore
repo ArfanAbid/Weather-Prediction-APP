@@ -1,0 +1,108 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+settings_local.py
+
+# Database files
+db.sqlite3
+
+# Media uploads
+media/
+
+# Static files collected by 'collectstatic'
+staticfiles/
+
+# Virtual environment
+venv/
+.env
+/env
+
+# Compiled Python files
+*.pyc
+*.pyo
+
+# Log files
+*.log
+
+# Cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.swp
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+*.sublime-*
+
+# Compiled assets
+*.css.map
+*.js.map
+
+# Environment variables file
+.env
+
+# Editor backups
+*~
+
+# macOS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Byte-compiled output (PyInstaller)
+__pycache__/
+*.pyc
+*.pyo
+
+# Caches
+__pycache__/
+*.pyc
+
+# Ignore .env file containing sensitive credentials
+.env
+
+# Ignore Docker Compose files
+docker-compose.yml
+docker-compose.dev.yml
+docker-compose.prod.yml
+
+# Ignore SQLite database
+*.sqlite3
+
+# Ignore migration files if using South or Django Migrations
+/migrations/
+
+# Ignore MySQL database files
+*.mysql
+*.sql
+*.sql.gz
+*.sql.bz2
+
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build
+/build
+# /dist
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea
+.vscode
+
+# Cache files
+.cache
+
+weather.db
