@@ -1,13 +1,13 @@
 import { React, useEffect, useState } from "react";
 import Temperature from "./componenets/Temperature";
 import Highlights from "./componenets/Highlights";
-// import React, { useState, } from 'react';
 import DateInput from "./componenets/DateInput";
 import HourlyUpdates from "./componenets/HourlyUpdates ";
 
 function App() {
   const [date, setDate] = useState("2024-12-10"); // Example date
   const [weatherData, setWeatherData] = useState(null);
+  const [ErrorMsg, setErrorMsg] = useState("")
 
   useEffect(() => {
     const requestOptions = {
@@ -19,7 +19,10 @@ function App() {
     fetch("http://localhost:8000/fetch_weather", requestOptions)
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Could not get data");
+          console.log(response.detail)
+          console.log("Error fetching data")
+          alert("Error fetching data");
+          // throw new Error("Could not get data");
         }
         return response.json();
       })
