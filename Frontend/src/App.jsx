@@ -37,40 +37,40 @@ function App() {
 
   return (
     <>
-      <div className=" h-screen">
-        <div className=" flex justify-center items-start">
-          <div className="w-1/5 h-1/3 mt-40">
-            <DateInput onDateChange={(newDate) => setDate(newDate)} />{" "}
-            {/* Pass the callback */}
-          </div>
-          <div className="w-1/5 h-1/3 mt-40">
-            {weatherData && (
-              <Temperature
-                stats={{
-                  temp: weatherData.data.daily[2], 
-                  condition: weatherData.data.daily[15],
-                  isDay: weatherData.data.daily[16] === "Yes", 
-                  location: "Kargil", 
-                  sunrise: weatherData.data.daily[19], 
-                  sunset: weatherData.data.daily[20], 
-                  img: weatherData.data.daily[16],
-                }}
-              />
-            )}
-          </div>
-          <div className="w-1/3 h-1/3 mt-40 p-10 grid grid-cols-2 gap-6">
-            <h1 className="text-slate-200 text-2xl col-span-2">
-              <span className="text-md font-semibold mx-1 text-blue-700">
-                {date}
-              </span>
-              Highlights
-            </h1>
+      <div className="h-screen flex flex-col md:flex-row justify-center items-start">
+        {/* <h1 className="text-slate-200">Weather APP Prediction</h1> */}
+        <div className="w-full md:w-1/5 h-1/3 mt-10 md:mt-40 px-1">
+          <DateInput onDateChange={(newDate) => setDate(newDate)} />
+        </div>
+        <div className="mt-10 md:mt-40">
+          {weatherData && (
+            <Temperature
+              stats={{
+                temp: weatherData.data.daily[2],
+                condition: weatherData.data.daily[15],
+                isDay: weatherData.data.daily[16] === "Yes",
+                location: "Kargil",
+                sunrise: weatherData.data.daily[19],
+                sunset: weatherData.data.daily[20],
+                img: weatherData.data.daily[16],
+              }}
+            />
+          )}
+        </div>
+        <div className="w-full md:w-1/3 h-1/3 mt-10 md:mt-40 p-5">
+          <h1 className="text-slate-200 text-xl md:text-2xl">
+            <span className="text-md font-semibold mx-1 text-blue-700">
+              {date}
+            </span>
+            Highlights
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
             {weatherData && (
               <>
                 <Highlights
                   stats={{
                     title: "Wind Speed",
-                    value: weatherData.data.daily[8], 
+                    value: weatherData.data.daily[8],
                     unit: "mph",
                   }}
                 />
@@ -99,11 +99,11 @@ function App() {
             )}
           </div>
         </div>
-        <div className=" mt-10 p-5 ml-36">
-          {weatherData && (
-            <HourlyUpdates hourlyData={weatherData.data.hourly} />
-          )}
-        </div>
+      </div>
+      <div className="md:mt-5 p-5  mt-64">
+        {weatherData && (
+          <HourlyUpdates hourlyData={weatherData.data.hourly} />
+        )}
       </div>
     </>
   );

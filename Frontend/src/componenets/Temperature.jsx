@@ -48,7 +48,7 @@ function Temperature({ stats }) {
         </p>
       </div>
 
-      <div className="flex justify-center text-slate-300 mt-8 text-[25px] ">
+      <div className="flex justify-center text-slate-300 mt-8 text-[25px] mx-5">
         {stats.condition}
       </div>
 

@@ -10,6 +10,7 @@ const DateInput = ({ onDateChange }) => {
 
   return (
     <>
+    <h1 className="text-slate-300  text-xl font-semibold p-1">Select date </h1>
       <input
         type="date"
         value={date}
