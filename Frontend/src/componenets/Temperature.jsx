@@ -1,14 +1,12 @@
 import React from "react";
+import { FiSunrise } from "react-icons/fi";
+import { FiSunset } from "react-icons/fi";
 
 function Temperature({ stats }) {
   return (
     <>
-      <div className="flex align-middle justify-center">
-        {/* Removed city input functionality */}
-      </div>
-
-      <div className="flex justify-center">
-        {stats.isDay!== 0? (
+      {/* <div className="flex justify-center">
+        {stats.isDay !== 0 ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -39,6 +37,9 @@ function Temperature({ stats }) {
             />
           </svg>
         )}
+      </div> */}
+      <div className="flex justify-center ">
+      <img src={stats.img} alt=""  className=" md:w-20 md:h-20 w-28 h-28"/>
       </div>
 
       <div className="flex justify-center items-center text-slate-200 mt-8">
@@ -52,8 +53,13 @@ function Temperature({ stats }) {
         {stats.condition}
       </div>
 
-      <div className="flex justify-center text-slate-400 mt-5 text-[15px]">
-        Sunrise  {stats.sunrise} | Sunset {stats.sunset}
+      <div className="flex text-[20px] mx-5 text-slate-400 m-1">
+        <FiSunrise size={28} className="text-yellow-400 mx-1" />
+        Sunrise {stats.sunrise}{" "}
+      </div>
+      <div className="flex text-[20px] mx-5 text-slate-400 m-1">
+        <FiSunset size={28} className="text-yellow-600 mx-1" />
+        Sunset {stats.sunset}{" "}
       </div>
     </>
   );

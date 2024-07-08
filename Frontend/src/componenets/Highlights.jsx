@@ -8,7 +8,7 @@ function Highlights({ stats }) {
         <span className="text-4xl font-bold">{stats.value}</span>
         <span className="text-2xl">{stats.unit}</span>
       </div>
-      {stats.direction? (
+      {/* {stats.direction? (
         <div className="flex mt-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ function Highlights({ stats }) {
           </svg>
           <div className="text-slate-200 ms-2">{stats.direction}</div>
         </div>
-      ) : null}
+      ) : null} */}
 
       {stats.title == "Humidity"? (
         <div className="w-full mt-4 bg-gray-200 rounded-full h-1.5 mb-4 dark:bg-gray-700">

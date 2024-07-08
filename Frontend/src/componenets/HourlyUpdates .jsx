@@ -11,7 +11,7 @@ function HourlyUpdates({ hourlyData }) {
 
   return (
     <div className="mt-0 p-4 text-slate-200">
-      <h2 className="text-2xl mb-4 text-center font-semibold">Hourly Updates</h2>
+      <h2 className="text-3xl mb-4 text-center font-semibold">Hourly Updates</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-5 justify-center items-center space-x-2 space-y-2">
         {hourlyData.slice(0, initialItemCount).map((updateArray, index) => (
